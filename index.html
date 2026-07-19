@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="Capture.JPG"   rounded-circle class="mx-auto d-block mb-3" style="width: 100px; height: 100px; border-radius: 50%;">
+        <div id="loginsecton" class="bg-light ">
+            <h3 class="text-center mb-4">تسجيل الدخول</h3>
+            <form id="loginfom">
+            <div class="mb-3">
+            <label class="form-label">البريد الإلكتروني</label>
+                <input type="email" id="loginemil" class="form-control" placeholder="Apdulrahman@gmail.com"  required>
+                </div>
+                <div class="mb-3">
+                <label class="form-label">كلمة المرور</label>
+                <input type="password" id="loginpassowrd" class="form-control" placeholder="A123456@a" required>
+                </div>
+                <button type="submit" class="btn btn-warning w-100">دخول</button>
+            </form>
+            <p class="text-center mt-3 small">ليس لديك حساب؟ <a href="#" id="toregestr">أنشئ حساب   </a></p>
+        </div>
+
+        <div id="regestrsecton" class="hidden">
+            <h3 class="text-center mb-4">إنشاء حساب</h3>
+            <form id="regestrfom">
+            <div class="mb-3">
+               <label class="form-label">البريد الإلكتروني</label>
+                <input type="email" id="regestremil" class="form-control" placeholder="Apdulrahman@gmail.com" required>
+                </div>
+                <div class="mb-3">
+                <label class="form-label">كلمة المرور</label>
+                <input type="password" id="regestrpassowrd" class="form-control" placeholder="*-*-*-*-*-" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">تسجيل الحساب</button>
+            </form>
+            <p class="text-center mt-3 small">الحساب موجود من قبل <a href="#" id="tologin">سجل دخولك</a></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
