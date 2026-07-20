@@ -11,40 +11,47 @@
 </head>
 <body>
 
-    <div class="card">
-        <div id="loginsection" class="bg-light p-4">
-            <h3 class="text-center mb-4">Login</h3>
-            <form id="loginform">
-                <div class="mb-3">
-                    <label class="form-label">Email Address</label>
-                    <input type="email" id="loginemail" class="form-control" placeholder="abdulrahman@gmail.com" required>
+    <div class="container mt-5">
+    <div class="row justify-content-center">
+         <div class="col-12 col-md-6 col-lg-4">
+            
+            <div class="card shadow-sm border-0">
+                 <div id="loginsection" class="bg-light p-4">
+                    <h3 class="text-center mb-4">Login</h3>
+                    <form id="loginform">
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" id="loginemail" class="form-control" placeholder="abdulrahman@gmail.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" id="loginpassword" class="form-control" placeholder="A123456@a" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Login</button>
+                    </form>
+                    <p class="text-center mt-3 small">Don't have an account? <a href="#" id="toregister">Sign Up</a></p>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" id="loginpassword" class="form-control" placeholder="A123456@a" required>
-                </div>
-                <button type="submit" class="btn btn-warning w-100">Login</button>
-            </form>
-            <p class="text-center mt-3 small">Don't have an account? <a href="#" id="toregister">Sign Up</a></p>
-        </div>
 
-        <div id="registersection" class="hidden p-4">
-            <h3 class="text-center mb-4">Create Account</h3>
-            <form id="registerform">
-                <div class="mb-3">
-                    <label class="form-label">Email Address</label>
-                    <input type="email" id="registeremail" class="form-control" placeholder="abdulrahman@gmail.com" required>
+                 <div id="registersection" class="hidden p-4">
+                    <h3 class="text-center mb-4">Create Account</h3>
+                    <form id="registerform">
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" id="registeremail" class="form-control" placeholder="abdulrahman@gmail.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" id="registerpassword" class="form-control" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                    <p class="text-center mt-3 small">Already have an account? <a href="#" id="tologin">Login</a></p>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" id="registerpassword" class="form-control" placeholder="••••••••" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Register</button>
-            </form>
-            <p class="text-center mt-3 small">Already have an account? <a href="#" id="tologin">Login</a></p>
+            </div>
+
         </div>
     </div>
-
+</div>
     <script src="main.js"></script>
 </body>
 </html>
