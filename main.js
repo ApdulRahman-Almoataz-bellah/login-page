@@ -1,51 +1,57 @@
-const regestrsecton = document.getElementById("regestrsecton");
-const toregestr = document.getElementById("toregestr")
+// Selecting elements with the corrected English IDs
+const loginsection = document.getElementById("loginsection");
+const registersection = document.getElementById("registersection");
+const toregister = document.getElementById("toregister");
 const tologin = document.getElementById("tologin");
-const regestrfom = document.getElementById("regestrfom");
-const loginfom = document.getElementById("loginfom")
+const registerform = document.getElementById("registerform");
+const loginform = document.getElementById("loginform");
 
-toregestr.onclick = function (e) {
-    e.preventDefault()
-    loginsecton.classList.add("hidden");
-    regestrsecton.classList.remove("hidden");
+// Switch to Register form
+toregister.onclick = function (e) {
+    e.preventDefault();
+    loginsection.classList.add("hidden");
+    registersection.classList.remove("hidden");
 };
 
+// Switch to Login form
 tologin.onclick = function (e) {
-    e.preventDefault()
-    regestrsecton.classList.add("hidden")
-    loginsecton.classList.remove("hidden")
+    e.preventDefault();
+    registersection.classList.add("hidden");
+    loginsection.classList.remove("hidden");
 };
 
-regestrfom.onsubmit = function (e) {
+// Handle Registration form submission
+registerform.onsubmit = function (e) {
     e.preventDefault();
 
-    let emil = document.getElementById("regestremil").value;
-    let passowrd = document.getElementById("regestrpassowrd").value;
+    let email = document.getElementById("registeremail").value;
+    let password = document.getElementById("registerpassword").value;
 
-    localStorage.setItem("useremil", emil)
-    localStorage.setItem("userpassowrd", passowrd)
+    localStorage.setItem("useremail", email);
+    localStorage.setItem("userpassword", password);
 
-    alert("تم تسجيل الحساب  ");
+    alert("Account registered successfully!");
 
-    regestrfom.reset();
+    registerform.reset();
 
-    regestrsecton.classList.add("hidden");
-    loginsecton.classList.remove("hidden")
+    registersection.classList.add("hidden");
+    loginsection.classList.remove("hidden");
 };
 
-loginfom.onsubmit = function (e) {
+// Handle Login form submission
+loginform.onsubmit = function (e) {
     e.preventDefault();
 
-    let emil = document.getElementById("loginemil").value;
-    let passowrd = document.getElementById("loginpassowrd").value;
+    let email = document.getElementById("loginemail").value;
+    let password = document.getElementById("loginpassword").value;
 
-    let storedemil = localStorage.getItem("useremil")
-    let storedpassowrd = localStorage.getItem("userpassowrd");
+    let storedEmail = localStorage.getItem("useremail");
+    let storedPassword = localStorage.getItem("userpassword");
 
-    if (emil == storedemil && passowrd == storedpassowrd) {
-        alert("تم تسجيل الدخول  ")
-        loginfom.reset();
+    if (email === storedEmail && password === storedPassword) {
+        alert("Logged in successfully!");
+        loginform.reset();
     } else {
-        alert("البريد الإلكتروني أو كلمة المرور غير صحيحة");
+        alert("Incorrect email or password.");
     }
-}
+};

@@ -1,9 +1,8 @@
-<html>
+ <html  >
 <head>
-    <link href="bootstrap.min.css" rel="stylesheet">
+     <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-    
         .hidden {
             display: none !important;
         }
@@ -12,37 +11,38 @@
 <body>
 
     <div class="card">
-        <img src="Capture.JPG"   rounded-circle class="mx-auto d-block mb-3" style="width: 100px; height: 100px; border-radius: 50%;">
-        <div id="loginsecton" class="bg-light ">
-            <h3 class="text-center mb-4">تسجيل الدخول</h3>
-            <form id="loginfom">
-            <div class="mb-3">
-            <label class="form-label">البريد الإلكتروني</label>
-                <input type="email" id="loginemil" class="form-control" placeholder="Apdulrahman@gmail.com"  required>
+        <!-- Login Section -->
+        <div id="loginsection" class="bg-light p-4">
+            <h3 class="text-center mb-4">Login</h3>
+            <form id="loginform">
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" id="loginemail" class="form-control" placeholder="abdulrahman@gmail.com" required>
                 </div>
                 <div class="mb-3">
-                <label class="form-label">كلمة المرور</label>
-                <input type="password" id="loginpassowrd" class="form-control" placeholder="A123456@a" required>
+                    <label class="form-label">Password</label>
+                    <input type="password" id="loginpassword" class="form-control" placeholder="A123456@a" required>
                 </div>
-                <button type="submit" class="btn btn-warning w-100">دخول</button>
+                <button type="submit" class="btn btn-warning w-100">Login</button>
             </form>
-            <p class="text-center mt-3 small">ليس لديك حساب؟ <a href="#" id="toregestr">أنشئ حساب   </a></p>
+            <p class="text-center mt-3 small">Don't have an account? <a href="#" id="toregister">Sign Up</a></p>
         </div>
 
-        <div id="regestrsecton" class="hidden">
-            <h3 class="text-center mb-4">إنشاء حساب</h3>
-            <form id="regestrfom">
-            <div class="mb-3">
-               <label class="form-label">البريد الإلكتروني</label>
-                <input type="email" id="regestremil" class="form-control" placeholder="Apdulrahman@gmail.com" required>
+        <!-- Register Section -->
+        <div id="registersection" class="hidden p-4">
+            <h3 class="text-center mb-4">Create Account</h3>
+            <form id="registerform">
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" id="registeremail" class="form-control" placeholder="abdulrahman@gmail.com" required>
                 </div>
                 <div class="mb-3">
-                <label class="form-label">كلمة المرور</label>
-                <input type="password" id="regestrpassowrd" class="form-control" placeholder="*-*-*-*-*-" required>
+                    <label class="form-label">Password</label>
+                    <input type="password" id="registerpassword" class="form-control" placeholder="••••••••" required>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">تسجيل الحساب</button>
+                <button type="submit" class="btn btn-primary w-100">Register</button>
             </form>
-            <p class="text-center mt-3 small">الحساب موجود من قبل <a href="#" id="tologin">سجل دخولك</a></p>
+            <p class="text-center mt-3 small">Already have an account? <a href="#" id="tologin">Login</a></p>
         </div>
     </div>
 
